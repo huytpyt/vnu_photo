@@ -1,0 +1,147 @@
+.main-container {
+  #vnu-login-modal {
+    .vnu-modal-content {
+      border-radius: 0px;
+      input, button {
+        border-radius: 0px;
+      }
+    }
+  }
+  #vnu-search {
+    background-color: #EEE;
+    border-bottom: 1px solid  #DADADA;
+    .row#search-bar-bottom {
+      height: 99px;
+      margin-left: 0px;
+      margin-right: 0px;
+      border-style: solid;
+      border-width: 0px 1px 0px 1px;
+      border-color:  #DADADA;
+
+      .text-parent {
+        font-size: 12px;
+        color: #8B8B8B;
+        font-weight: normal;
+      }
+
+      .author-block-content {
+        padding-top: 12px;
+      }
+      .author-field {
+        height: 40px !important;
+        button {
+          height: 40px;
+        }
+        .dropdown-menu li {
+          height: 40px !important;
+          a {
+            padding: 10px;
+          }
+        }
+      }
+      .apply-filter-btn, .clear-filter-btn {
+        border-left: 1px solid  #DADADA;
+        width: 99px;
+        height: 99px;
+        background-color: white;
+        float: right;
+        border-radius: 0px;
+      }
+      .btn.apply-filter-btn:focus, .btn.clear-filter-btn:focus{
+        outline: 1px;
+      }
+
+      .filter-btn {
+        height: 50px;
+      }
+
+      #clear-apply-block {
+        padding-right: 0px;
+      }
+    }
+  }
+  #slide {
+    margin-top: 50px;
+    .carousel-inner>.item>img {
+      margin: auto;
+    }
+    .sd-arrow {
+      font-size: 70px;
+      margin-top: 150%;
+    }
+    .caption-slide-1 {
+      top: 10%;
+      text-align: left;
+    }
+    .caption-slide-2 {
+      top: 0%;
+      h2 {
+        color: white;
+        font-size: 25px;
+      }
+    }
+    .slide-content-1 {
+      background-color: rgba(31, 23, 9, 0.74);
+    }
+  }
+  #vnu-gallery {
+    .large-12 {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      top: -50px;
+    }
+  }
+
+}
+
+
+@media (min-width: 1200px)
+{
+  .main-container {
+    #vnu-gallery {
+      .large-12 {
+        width: 1160px;
+        right: 23%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-container {
+    #vnu-gallery {
+      .large-12 {
+        width: 960px;
+        right: 11%;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-container {
+    #vnu-gallery {
+      .large-12 {
+        width: 740px;
+        right: 3%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .main-container {
+    #vnu-search {
+      .row#search-bar-bottom {
+        .apply-filter-btn {
+          width: 50px;
+        }
+        .filter-btn {
+          width: 40px;
+          height: 40px;
+          margin-left: -7px;
+        }
+      }
+    }
+  }
+}

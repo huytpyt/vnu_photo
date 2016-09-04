@@ -1,0 +1,22 @@
+.table-responsive
+  table.table
+    tbody
+      tr
+        td
+          strong Image:
+        td
+          = image_tag @photo.image.url(:large)
+      tr
+        td
+          strong Title:
+        td
+          = @photo.title
+      tr
+        td
+          strong Prize:
+        td
+          = @photo.prize
+
+= link_to 'Edit', edit_author_photo_path(@author, @photo)
+|&nbsp;|&nbsp;
+= link_to 'Back', author_photos_path

@@ -1,0 +1,40 @@
+nav.navbar.navbar-default.navbar-custom.navbar-fixed-top.vnu-navbar
+  .container
+    .row
+      .col-md-12.col-sm-12
+        .row
+          .col-sm-4.vnu-col-4
+            .navbar-header.page-scroll
+              button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+                span.sr-only
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              = image_tag "vnu20.png", class: "vnu-logo"
+              a.navbar-brand.logo-block href="#{root_path}"  = I18n.t("logo")
+
+          .col-sm-8.vnu-col-8
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+              ul.nav.navbar-nav.navbar-right
+                li
+                  = link_to I18n.t("intro"), root_path
+                li
+                  = link_to I18n.t("gallery"), root_path
+                li
+                  = link_to I18n.t("prize"), root_path
+                li
+                  = link_to I18n.t("rule"), root_path
+                li
+                  = link_to I18n.t("contact"), root_path
+                - if user_signed_in?
+                  li
+                    a href="#{authors_path}" = I18n.t("admin")
+                  li
+                    a href="#{edit_user_registration_path}" = I18n.t("update")
+                  li
+                    = link_to I18n.t('logout'), destroy_user_session_path, method: 'delete'
+                - else
+                  li
+                    a data-target="#vnu-login-modal" data-toggle="modal" href="#" = I18n.t("login")
+- if params[:controller] == 'homes'
+  = render 'login'

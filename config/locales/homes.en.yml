@@ -1,0 +1,9 @@
+en:
+  homes:
+    login:
+      sign_in: "Login"
+      header-modal: " Login to your account"
+      remember_me: "Remember me"
+      close: "Close"
+    search:
+      author: "Tác giả"

@@ -1,0 +1,11 @@
+.container
+  .row#search-bar-bottom
+    .col-sm-4.col-xs-4.author-block
+      .author-block-content
+        .text-parent.text-uppercase = t(".author")
+        = select_tag 'author', options_for_select(get_authors, selected: params[:author]),  class: "selectpicker author-field"
+    .col-sm-5.col-xs-5.hidden-block
+    .col-sm-3.col-xs-3#clear-apply-block
+      button.apply-filter-btn.btn type="submit"
+        .row
+          .col-sm-12 = image_tag("filter-all.png", class: "filter-btn")
