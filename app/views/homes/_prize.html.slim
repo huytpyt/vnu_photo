@@ -1,0 +1,41 @@
+.container
+  .row#prize-content
+    .col-sm-6.prize-block
+      .row
+        .col-sm-2.col-xs-2
+          = image_tag 'first-prize.png', class: "prize-logo"
+          .text-center = @first_prize.prize
+        .col-sm-10.wrapper.col-xs-10
+          span.text.h4.text-center
+            = @first_prize.title
+            br
+              | Tác giả:&nbsp;
+              = @first_prize.author.full_name
+          = image_tag @first_prize.image.url(:large), class: "photo-prize"
+
+    - @second_prizes.each do |second_prize|
+      .col-sm-6.prize-block
+        .row
+          .col-sm-2.col-xs-2
+            = image_tag 'second-prize.png', class: "prize-logo"
+            .text-center.text-margin = second_prize.prize
+          .col-sm-10.wrapper.col-xs-10
+            span.text.h4.text-center
+              = second_prize.title
+              br
+                | Tác giả:&nbsp;
+                = second_prize.author.full_name
+            = image_tag second_prize.image.url(:large), class: "photo-prize"
+    - @third_prizes.each do |third_prize|
+      .col-sm-6.prize-block
+        .row
+          .col-sm-2.col-xs-2
+            = image_tag 'third-prize.png', class: "prize-logo"
+            .text-center.text-margin = third_prize.prize
+          .col-sm-10.wrapper.col-xs-10
+            span.text.h4.text-center
+              = third_prize.title
+              br
+                | Tác giả:&nbsp;
+                = third_prize.author.full_name
+            = image_tag third_prize.image.url(:large), class: "photo-prize"
