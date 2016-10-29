@@ -1,6 +1,7 @@
 class AuthorsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_author, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource class: :Admin
 
   # GET /authors
   # GET /authors.json

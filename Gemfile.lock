@@ -43,6 +43,7 @@ GEM
     bootstrap-select-rails (1.6.3)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.14.0)
     ckeditor (4.2.0)
       cocaine
       orm_adapter (~> 0.5.0)
@@ -204,6 +205,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-select-rails (~> 1.6.3)
   byebug
+  cancancan
   ckeditor (~> 4.2)
   coffee-rails (~> 4.1.0)
   devise

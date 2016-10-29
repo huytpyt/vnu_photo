@@ -52,3 +52,4 @@ gem 'bootstrap-select-rails', '~> 1.6.3'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'kaminari'
 gem 'ckeditor', '~> 4.2'
+gem "cancancan"
