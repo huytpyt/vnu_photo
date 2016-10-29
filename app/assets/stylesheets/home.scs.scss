@@ -14,7 +14,7 @@
     .row#prize-content {
       min-height: 400px;
       border-style: solid;
-      border-width: 0px 1px 1px 1px;
+      border-width: 0px 1px 0px 1px;
       border-color:  #DADADA;
       margin-left: 0px;
       margin-right: 0px;
@@ -70,11 +70,11 @@
     background-color: #EEE;
     border-bottom: 1px solid  #DADADA;
     .row#search-bar-bottom {
-      height: 99px;
+      height: 100px;
       margin-left: 0px;
       margin-right: 0px;
       border-style: solid;
-      border-width: 0px 1px 0px 1px;
+      border-width: 1px 1px 0px 1px;
       border-color:  #DADADA;
 
       .text-parent {

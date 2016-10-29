@@ -8,7 +8,8 @@
               = link_to gallery_path(photo), target: "_blank"
                 = image_tag photo.image.url(:large)
 
-        ul.pagination
-          li
-            a class="next hidden" href="?page=1" Next Page
+        - unless (params[:author].present? && params[:author]!="all")
+          ul.pagination
+            li
+              a class="next hidden" href="?page=1" Next Page
         .loading
