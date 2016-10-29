@@ -1,19 +1,24 @@
 #myCarousel.carousel.slide data-ride="carousel"
   ol.carousel-indicators
-    li.active data-slide-to="0" data-target="#myCarousel"
+    li data-slide-to="0" data-target="#myCarousel"
     li data-slide-to="1" data-target="#myCarousel"
+    li data-slide-to="2" data-target="#myCarousel"
+    li.active data-slide-to="3" data-target="#myCarousel"
 
   .carousel-inner role="listbox"
-    .item.active
+    .item
       = image_tag asset_path('slider/background_1.jpg')
       .carousel-caption.caption-slide-1
-        h1 = t(".sagodev")
-        p.slide-content-1 = t(".sagodev_detail")
 
     .item
       = image_tag asset_path('slider/background_2.jpg')
       .carousel-caption.caption-slide-2
-        h2 = t(".slide_2_content")
+    .item
+      = image_tag asset_path('slider/background_3.jpg')
+      .carousel-caption.caption-slide-2
+    .item.active
+      = image_tag asset_path('slider/background_4.jpg')
+      .carousel-caption.caption-slide-2
 
   a.left.carousel-control data-slide="prev" href="#myCarousel" role="button"
     span.fa.fa-angle-left.sd-arrow aria-hidden="true"

@@ -17,6 +17,11 @@ body#vnu-photo-body {
 }
 
 .main-container {
+  p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+  }
   #vnu-header {
     .vnu-navbar {
       background-color: #e7e7e7;
@@ -80,6 +85,9 @@ body#vnu-photo-body {
 }
 @media screen and (max-width: 767px) {
   .main-container {
+    #vnu-main-content {
+      margin-bottom: 40px;
+    }
     #vnu-header {
       .logo-block {
         float: left;
@@ -91,10 +99,10 @@ body#vnu-photo-body {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 991px) {
   .main-container {
     #vnu-main-content {
-      margin-top: 100px;
+      margin-top: 140px;
     }
   }
 }
@@ -102,7 +110,15 @@ body#vnu-photo-body {
 @media (min-width: 480px) and (max-width: 767px) {
   .main-container {
     #vnu-main-content {
-      margin-top: 60px;
+      margin-top: 70px;
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  .main-container {
+    #vnu-main-content {
+      margin-top: 115px;
+      min-height: 400px;
     }
   }
 }

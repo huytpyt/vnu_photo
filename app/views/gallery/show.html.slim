@@ -1,0 +1,17 @@
+#vnu-gallery-show
+  .row.main-content
+    .col-sm-9.photo-block
+      = image_tag @photo.image.url(:large), class: "photo"
+      - content_for(:vnu_image, @photo.image.url)
+    .col-sm-3.content-block
+      h3.title
+        = @photo.title
+        - content_for(:vnu_title, @photo.title)
+
+      h4.author
+        = t(".author")
+        = get_author(@photo)
+      hr
+      .fb-like data-action="like" data-href="#{request.url}" data-layout="button_count" data-share="true" data-show-faces="true" data-size="small"
+
+

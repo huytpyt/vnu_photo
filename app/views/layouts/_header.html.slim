@@ -17,15 +17,15 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top.vnu-navbar
             #bs-example-navbar-collapse-1.collapse.navbar-collapse
               ul.nav.navbar-nav.navbar-right
                 li
-                  = link_to I18n.t("intro"), root_path
+                  = link_to I18n.t("intro"), post_show_post_index_path("gioi-thieu")
                 li
-                  = link_to I18n.t("gallery"), root_path
+                  = link_to I18n.t("gallery_text"), gallery_index_path
                 li
-                  = link_to I18n.t("prize"), root_path
+                  = link_to I18n.t("prize"), post_show_post_index_path("giai-thuong")
                 li
-                  = link_to I18n.t("rule"), root_path
+                  = link_to I18n.t("rule"), post_show_post_index_path("the-le")
                 li
-                  = link_to I18n.t("contact"), root_path
+                  = link_to I18n.t("contact"), post_show_post_index_path("lien-he")
                 - if user_signed_in?
                   li
                     a href="#{authors_path}" = I18n.t("admin")

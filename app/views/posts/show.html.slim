@@ -1,0 +1,12 @@
+p#notice= notice
+p
+  strong Category:
+  = @post.category
+p
+  strong Content:
+  br
+  = raw @post.content
+br
+= link_to 'Edit', edit_post_path(@post)
+|&nbsp;|&nbsp;
+= link_to 'Back', posts_path

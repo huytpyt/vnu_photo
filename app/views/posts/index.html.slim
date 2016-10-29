@@ -1,0 +1,17 @@
+p#notice= notice
+h1 Listing Posts
+table.table.table-striped
+  thead
+    tr
+      th Category
+      th Content
+      th colspan="3"
+  tbody
+    - @posts.each do |post|
+      tr
+        td = post.category
+        td = raw post.content
+        td = link_to 'Show', post
+        td = link_to 'Edit', edit_post_path(post)
+br
+= link_to 'Back', admin_path

@@ -1,11 +1,12 @@
 doctype html
 html
   head
-    title = I18n.t("title")
-    / meta property="og:title" content="#{I18n.t('title')}"
-    / meta property="og:image" content="#{root_url}#{asset_path('facebook-background.png')}"
-    / meta property="og:description" content="#{I18n.t('description')}"
-    / = favicon_link_tag 'favicon.ico'
+    - if params[:controller] == "gallery"
+      title = yield(:vnu_title)
+      meta property="og:image" content="#{yield(:vnu_image)}"
+    - else
+      title = I18n.t("title")
+    = favicon_link_tag 'favicon-32x32.png'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags

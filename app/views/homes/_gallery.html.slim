@@ -5,10 +5,10 @@
         ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3.masonry
           - @photos.each do |photo|
             li.masonry-item
-              a target="_blank" href="javascript:void(0)"
+              = link_to gallery_path(photo), target: "_blank"
                 = image_tag photo.image.url(:large)
 
         ul.pagination
           li
-            a class="next" href="/?page=1" Next Page
+            a class="next hidden" href="?page=1" Next Page
         .loading

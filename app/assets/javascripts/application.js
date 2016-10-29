@@ -18,5 +18,6 @@
 //= require imagesloaded.pkgd.min
 //= require jquery.infinitescroll.min
 //= require main.js
-//= require turbolinks
+//= require ckeditor/init
+// require turbolinks
 //= require_tree .
