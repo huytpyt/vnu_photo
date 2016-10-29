@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'post/show'
-
+  mount Ckeditor::Engine => '/ckeditor'
   resources :gallery, only: [:index, :show]
   devise_for :users
   root 'homes#index'
